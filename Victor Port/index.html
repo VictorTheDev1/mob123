@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Victor — Portfolio</title>
+  <meta name="description" content="Moradeyo Victor — Frontend developer portfolio. Premium dark-blue theme with blurred glow effects." />
+
+  <link rel="icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+  <!-- blurred glow blobs -->
+  <div class="blob" aria-hidden="true"></div>
+  <div class="blob b2" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="wrap" id="top">
+    <header>
+      <div class="brand">
+        <!-- replace avatar.png with your image or URL -->
+        <img src="/images/photo-output.webp" alt="Victor avatar" onerror="this.src='https://via.placeholder.com/300x300.png?text=V'">
+        <div>
+          <h1>Moradeyo Victor</h1>
+          <div class="tag">Frontend Developer • Baltimore, MD</div>
+        </div>
+      </div>
+
+      <nav aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="hambtn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">☰</button>
+    </header>
+
+    <!-- mobile menu -->
+    <div id="mobileMenu" style="display:none; margin-bottom:16px;">
+      <div class="card" style="padding:12px; display:flex; flex-direction:column; gap:8px">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="card hero-left" style="position:relative;">
+        <h2 id="hero-heading">Hi — I'm Victor</h2>
+        <p class="lead muted">I craft premium, fast, and accessible web interfaces for projects and businesses.</p>
+
+        <p style="font-size:1.05rem; margin:0">I build <span id="typed" class="type">modern interfaces</span></p>
+
+        <div class="cta-row" style="margin-top:14px">
+          <a class="btn" href="#projects">See Projects</a>
+          <a class="btn ghost" href="#contact">Hire Me</a>
+          <a class="btn ghost" href="#" onclick="alert('Replace with resume link')">Resume</a>
+        </div>
+
+        <div style="margin-top:14px; color:var(--muted)"><strong>Availability:</strong> Open for freelance & remote work</div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div class="profile card" aria-hidden="true" style="padding:6px;">
+          <!-- replace profile.jpg with your photo -->
+          <img src="profile.jpg" alt="Victor profile" onerror="this.src='https://via.placeholder.com/500x500.png?text=Victor'">
+        </div>
+
+        <div class="card" style="padding:12px;">
+          <strong style="color:var(--text)">Contact</strong>
+          <div style="margin-top:8px" class="muted">Email: <a href="mailto:moradeyovictor@gmail.com" style="color:inherit; text-decoration:underline">moradeyovictor@gmail.com</a></div>
+          <div class="muted-italic" style="margin-top:8px">GitHub & LinkedIn links available in the Projects section</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="card" aria-labelledby="about-heading">
+      <h2 id="about-heading" class="section-title">About Me</h2>
+      <p class="muted">I'm a frontend developer who focuses on polished, performant, and accessible user interfaces. I enjoy transforming ideas into delightful web experiences — with strong attention to detail, performance, and UX.</p>
+      <div style="display:flex; gap:12px; margin-top:12px; flex-wrap:wrap">
+        <div class="card" style="flex:1; min-width:220px; padding:12px;">
+          <strong>What I Do</strong>
+          <p class="muted" style="margin-top:8px">UI/UX, Responsive Frontend, Performance Optimization, Accessibility, Animations</p>
+        </div>
+        <div class="card" style="width:220px; padding:12px;">
+          <strong>Stack</strong>
+          <p class="muted" style="margin-top:8px">HTML • CSS • JavaScript • React • Flask • Git</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="card" aria-labelledby="skills-heading">
+      <h2 id="skills-heading" class="section-title">Skills</h2>
+      <div class="skills-grid" role="list">
+        <div class="skill" role="listitem">HTML5</div>
+        <div class="skill" role="listitem">CSS3 (Grid & Flex)</div>
+        <div class="skill" role="listitem">JavaScript (ES6+)</div>
+        <div class="skill" role="listitem">React</div>
+        <div class="skill" role="listitem">Responsive Design</div>
+        <div class="skill" role="listitem">Animations</div>
+        <div class="skill" role="listitem">Accessibility</div>
+        <div class="skill" role="listitem">Git & GitHub</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="card" aria-labelledby="projects-heading">
+      <h2 id="projects-heading" class="section-title">Projects</h2>
+      <p class="muted">Live demos + repository links. Click Live to open demo, Code to go to GitHub.</p>
+
+      <div style="height:12px"></div>
+
+      <div class="projects-grid">
+        <!-- Example project -->
+        <article class="project" aria-labelledby="p1">
+          <div>
+            <div id="p1" class="proj-title">WePlay — Music Player</div>
+            <div class="proj-desc">Sleek music player UI with album browsing and smooth transitions.</div>
+          </div>
+          <div class="proj-links">
+            <span class="proj-badge">Featured</span>
+            <a class="pill" href="#" target="_blank" rel="noopener">Live</a>
+            <a class="pill" href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <article class="project" aria-labelledby="p2">
+          <div>
+            <div id="p2" class="proj-title">ShoeFlip — Marketplace</div>
+            <div class="proj-desc">Modern shoe exchange platform with clean UX and listing cards.</div>
+          </div>
+          <div class="proj-links">
+            <a class="pill" href="#" target="_blank" rel="noopener">Live</a>
+            <a class="pill" href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <article class="project" aria-labelledby="p3">
+          <div>
+            <div id="p3" class="proj-title">GoFood — Recipes</div>
+            <div class="proj-desc">Responsive recipe site, optimized for mobile-first browsing.</div>
+          </div>
+          <div class="proj-links">
+            <a class="pill" href="#" target="_blank" rel="noopener">Live</a>
+            <a class="pill" href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <!-- Add/duplicate more projects as needed -->
+        <article class="project" aria-labelledby="p4">
+          <div>
+            <div id="p4" class="proj-title">Deon Photography</div>
+            <div class="proj-desc">Landing page with booking form and gallery.</div>
+          </div>
+          <div class="proj-links">
+            <a class="pill" href="#" target="_blank">Live</a>
+            <a class="pill" href="#" target="_blank">Code</a>
+          </div>
+        </article>
+
+        <article class="project" aria-labelledby="p5">
+          <div>
+            <div id="p5" class="proj-title">Mayoral Wardrobe</div>
+            <div class="proj-desc">E-commerce UI for clothing brand with product cards.</div>
+          </div>
+          <div class="proj-links">
+            <a class="pill" href="#" target="_blank">Live</a>
+            <a class="pill" href="#" target="_blank">Code</a>
+          </div>
+        </article>
+
+        <article class="project" aria-labelledby="p6">
+          <div>
+            <div id="p6" class="proj-title">Trading Chart Analyzer</div>
+            <div class="proj-desc">Flask tool that analyzes chart screenshots to suggest signals.</div>
+          </div>
+          <div class="proj-links">
+            <a class="pill" href="#" target="_blank">Live</a>
+            <a class="pill" href="#" target="_blank">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="card" aria-labelledby="exp-heading">
+      <h2 id="exp-heading" class="section-title">Experience</h2>
+      <div class="list">
+        <div class="item"><div><strong>Frontend Developer — Freelance</strong><div class="muted">2021 — Present</div></div><div class="muted">Building websites, landing pages, and web apps</div></div>
+        <div class="item"><div><strong>Web Dev Intern — Company</strong><div class="muted">2020 — 2021</div></div><div class="muted">Performance & UI improvements</div></div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="card" aria-labelledby="cert-heading">
+      <h2 id="cert-heading" class="section-title">Certificates</h2>
+      <div class="list">
+        <div class="item"><div>Responsive Web Design — freeCodeCamp</div><div class="muted">2024</div></div>
+        <div class="item"><div>Frontend Libraries — Coursera</div><div class="muted">2023</div></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="section-title">Contact</h2>
+      <p class="muted">Use the form to send a message — it will submit via FormSubmit without leaving the page.</p>
+
+      <!-- Replace YOUR_EMAIL_HERE with your FormSubmit email endpoint (eg. https://formsubmit.co/you@example.com) -->
+      <form id="contactForm" class="card" style="margin-top:12px; padding:16px; display:flex; flex-direction:column; gap:10px;" action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <div class="row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your name">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about the project..." required></textarea>
+        </div>
+
+        <div class="form-foot">
+          <div class="muted">Or email: <a href="mailto:moradeyovictor@gmail.com" style="color:inherit; text-decoration:underline">moradeyovictor@gmail.com</a></div>
+          <div style="display:flex; gap:8px;">
+            <button id="submitBtn" class="btn">Send message</button>
+            <button id="clearBtn" type="button" class="btn ghost">Clear</button>
+          </div>
+        </div>
+
+        <div id="formStatus" aria-live="polite" style="margin-top:8px"></div>
+      </form>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Moradeyo Victor • Built with ❤️ • <a href="#top" style="color:inherit; text-decoration:underline">Top</a>
+    </footer>
+  </div>
+
+  <script src="/script.js">
+  </script>
+</body>
+</html>
