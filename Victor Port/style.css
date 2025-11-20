@@ -1,10 +1,12 @@
+  @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Anton&family=Baskervville:ital,wght@0,400..700;1,400..700&family=LXGW+Marker+Gothic&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Truculenta:opsz,wght@12..72,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+ 
   /* =========================
        THEME VARIABLES
        ========================= */
     :root{
       --bg:#05060a;               /* page background */
-      --panel: rgba(12,20,34,0.55); /* frosted card background */
-      --card-border: rgba(255,255,255,0.04);
+      --panel: rgba(15, 30, 56, 0.55); /* frosted card background */
+      --card-border: rgba(240, 234, 234, 0.04);
       --muted: #98a3b6;
       --text: #eaf3ff;
       --accent-blue: 28, 93, 230;   /* rgb(28,93,230) - bright blue */
@@ -123,13 +125,24 @@
 
     .hero-left h2{ font-size:2rem; margin:0 0 8px }
     .hero-left p.lead{ color:var(--muted); margin:0 0 18px; font-size:1.03rem }
+   
+     #hero-heading span{
+      color: rgb(10, 75, 172);
+     }
+       #hero-heading{
+        font-family: LXGW Marker Gothic;
 
+       }
     .type {
-      font-weight:800;
-      background: linear-gradient(90deg, rgba(var(--accent-blue),1), rgba(var(--accent-purple),1));
+      font-size:1.1rem; font-weight:700;
+      background: rgb(10, 75, 172);
       -webkit-background-clip: text; background-clip:text; color:transparent;
+      font-family: ubuntu, sans-serif;
+      text-transform: capitalize;
     }
-
+    #type1{
+      font-family: 'ubuntu', sans-serif;
+    }
     .profile{
       width:180px; height:180px; border-radius:18px; overflow:hidden; margin-left:auto;
       border:1px solid rgba(255,255,255,0.06);
@@ -141,14 +154,17 @@
     .cta-row{ display:flex; gap:12px; margin-top:12px; flex-wrap:wrap }
     .btn{
       padding:10px 14px; border-radius:12px; border:0; cursor:pointer; font-weight:700;
-      background: linear-gradient(90deg, rgba(var(--accent-blue),0.14), rgba(var(--accent-purple),0.12)); color:var(--text);
+      background: linear-gradient(120deg, rgba(var(--accent-blue),0.14), rgba(var(--accent-purple),0.12)); color:var(--text);
       box-shadow: 0 10px 26px rgba(2,6,20,0.6);
+      text-decoration: none;
+      font-family: ubuntu;
+      font-weight: 500;
     }
     .btn.ghost{ background: transparent; border:1px solid rgba(255,255,255,0.05); color:var(--muted) }
 
     /* sections */
     section{ margin-bottom:28px }
-    .section-title{ display:flex; align-items:center; gap:12px; margin:0 0 12px 0; font-size:1.06rem }
+    .section-title{ display:flex; align-items:center; gap:12px; margin:0 0 12px 0; font-size:1.06rem; font-family: 'Ubuntu', sans-serif; font-weight:800;  } 
     .muted{ color:var(--muted); font-size:0.98rem }
 
     /* skill chips */
