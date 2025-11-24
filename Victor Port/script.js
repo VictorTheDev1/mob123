@@ -1,3 +1,5 @@
+
+  
   // small helpers
     const $ = sel => document.querySelector(sel);
 
@@ -95,3 +97,4 @@
         a.addEventListener('click', (e)=> { e.preventDefault(); alert('Replace with your project link (Live demo or GitHub).') });
       }
     });
+

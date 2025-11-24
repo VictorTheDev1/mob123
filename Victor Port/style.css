@@ -39,8 +39,8 @@
     /* moving gradient blobs (blurred lights) */
     .blob {
       position:fixed;
-      width:600px;height:600px;
-      top: -15%; left: -10%;
+      width:800px;height:600px;
+      top: -10%; left: -10%;
       z-index:0;
       pointer-events:none;
       filter: blur(60px) saturate(120%);
@@ -84,12 +84,22 @@
       position:relative;
       z-index:2;
     }
+  
+    .back{
+      margin-bottom: -40px;
+    }
+   
+    
 
     header{
       display:flex; align-items:center; justify-content:space-between; gap:12px;
-      margin-bottom:26px;
+
     }
-    .brand{ display:flex; gap:12px; align-items:center }
+    .brand{ 
+      display:flex; 
+      gap:12px; 
+      align-items:center;
+    }
     .brand img{
       width:52px; height:52px; border-radius:12px; object-fit:cover;
       border:1px solid rgba(255,255,255,0.05);
@@ -108,12 +118,89 @@
 
     .hambtn{ display:none; background:transparent; border:0; color:var(--muted); font-size:1.2rem }
 
-    /* HERO SECTION */
-    .hero{
-      display:grid; grid-template-columns: 1fr 420px; gap:28px; align-items:center; margin-bottom:36px;
-      position:relative;
-    }
-    .card{
+/* =========================
+    HERO SECTION
+========================= */
+.hero {
+  text-align: center;
+  margin-top: 130px;
+  padding: 80px 20px;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 18%;
+}
+
+.hero h1 {
+  font-size: 3.8rem;
+  font-weight: 800;
+  margin: 0;
+  color: #fff;
+  letter-spacing: -1px;
+     font-family: ubuntu, sans-serif;
+      text-transform: capitalize;
+}
+
+.hero p {
+  margin-top: 16px;
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+    BUTTON GROUP
+========================= */
+.btn-group {
+  margin-top: 32px;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 28px;
+  font-size: 1rem;
+  border-radius: 40px;
+  background: rgba(0, 110, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 110, 255, 0.5);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: rgba(0, 110, 255, 0.45);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 110, 255, 0.5);
+}
+
+/* =========================
+    BLUR BALLS
+========================= */
+
+
+
+
+/* RESPONSIVE HERO */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.8rem; }
+  
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 200px;
+    margin: auto;
+  }
+}
+
+
+
+ .card{
       background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
       border-radius:var(--radius);
       padding:22px;
@@ -130,7 +217,8 @@
       color: rgb(10, 75, 172);
      }
        #hero-heading{
-        font-family: LXGW Marker Gothic;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        
 
        }
     .type {
@@ -215,6 +303,57 @@
     .form-foot{ display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap }
 
     footer{ color:var(--muted); font-size:0.95rem; padding:18px 0; text-align:center }
+/*footer*/
+.foot{
+    color: var(--main-color);
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  
+    margin-top: 100px;
+   
+}
+.foot2 a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;   
+    width: 42px;
+    height: 42px;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+   margin: 3rem 1.5rem 3rem 0;
+   transition: 0.4s ease;
+   text-decoration: none;
+}
+
+
+.foot2 a:hover{
+    transform: scale(1.2) translate(-10px);
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 8px var(--main-color);
+}
+
+/*responsive web*/
+@media (max-width: 1200px) {
+   
+    .container {
+       width: 290px;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px var(--main-color);
+    }
+    
+}
 
     /* responsive */
     @media (max-width:980px){

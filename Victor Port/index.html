@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Victor — Portfolio</title>
   <meta name="description" content="Moradeyo Victor — Frontend developer portfolio. Premium dark-blue theme with blurred glow effects." />
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
+    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <link rel="icon" href="favicon.ico" />
 
@@ -17,6 +20,8 @@
   <div class="blob b2" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
 
+
+  <div class="back"></div>
   <div class="wrap" id="top">
     <header>
       <div class="brand">
@@ -52,41 +57,33 @@
       </div>
     </div>
 
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="card hero-left" style="position:relative;">
-        <h2 id="hero-heading">Hi I'm <span>Victor</span></h2>
-        <p class="lead muted">As a passionate coder, I've transformed my interest into expceptional skills in website development and design.</p>
+ 
 
-        <p id="type1" style="font-size:1.05rem; margin:0">I build <span id="typed" class="type">modern interfaces</span></p>
+<!-- Decorative Blur Balls -->
+<div class="ball ball1"></div>
+<div class="ball ball2"></div>
 
-        <div class="cta-row" style="margin-top:14px">
-          <a class="btn" href="#projects">See Projects</a>
-          <a class="btn" href="#contact">Hire Me</a>
-          <a class="btn" href="#" onclick="alert('Replace with resume link')">Resume</a>
-        </div>
+<!-- HERO SECTION -->
+<section class="hero">
+  <h1 id="typing">
+    <span>Build Something Legendary</span>
+  </h1>
 
-        <div style="margin-top:14px; color:var(--muted)"><strong>Availability:</strong> Open for freelance & remote work</div>
-      </div>
+  <p>Your ideas deserve a modern, premium, and clean design.  
+     Let's create digital experiences that stand out.</p>
 
-      <div style="display:flex; flex-direction:column; gap:12px;">
-        <div class="profile card" aria-hidden="true" style="padding:6px;">
-          <!-- replace profile.jpg with your photo -->
-          <img src="/images/photo-output.webp" alt="Victor profile" onerror="this.src='https://via.placeholder.com/500x500.png?text=Victor'">
-        </div>
+  <div class="btn-group">
+    <button class="btn">About Me</button>
+    <button class="btn">Resume</button>
+    <button class="btn">Book Me</button>
+  </div>
+</section>
 
-        <div class="card" style="padding:12px;">
-          <strong style="color:var(--text)">Contact</strong>
-          <div style="margin-top:8px" class="muted">Email: <a href="mailto:moradeyovictor@gmail.com" style="color:inherit; text-decoration:underline">moradeyovictor@gmail.com</a></div>
-          <div class="muted-italic" style="margin-top:8px">GitHub & LinkedIn links available in the Projects section</div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ABOUT -->
+  <!-- ABOUT -->
     <section id="about" class="card" aria-labelledby="about-heading">
       <h2 id="about-heading" class="section-title">About Me</h2>
-      <p class="muted">I'm a passionate and dedicated individual with a keen eye for detail. I take my time to ensure that every project I undertake showcases the best of my abilities. Click Read More to explore my Certifications, experience, and projects in depth</p>
+      <p class="muted">I'm a passionate and dedicated individual with a keen eye for detail. I take my time to ensure that every project I undertake showcases the best of my abilities. </p>
       <div style="display:flex; gap:12px; margin-top:12px; flex-wrap:wrap">
         <div class="card" style="flex:1; min-width:220px; padding:12px;">
           <strong>What I Do</strong>
@@ -247,10 +244,24 @@
       </form>
     </section>
 
-    <footer>
-      © <span id="year"></span> Moradeyo Victor • Built with ❤️ • <a href="#top" style="color:inherit; text-decoration:underline">Top</a>
-    </footer>
+   <div class="foot">
+     &copy;Victor - All Rights Reserved
+     <br>
+     <div class="foot2">
+                   <a href="https://www.linkedin.com/in/moradeyo-olamiposi-a25420245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer"> <i class="bx bxl-linkedin" id="fa"></i></a>
+                    <a href="https://www.instagram.com/victor_thedeveloper?igsh=MXcwYm01ZTBpeXZiNg==" target="_blank" rel="noopener noreferrer"> <i class="bx bxl-instagram" id="fa"></i></a>
+                    <a href="https://x.com/victor1forev" target="_blank" rel="noopener noreferrer"> <i class="bx bxl-twitter" id="fa"></i></a>
+                    <a href="https://discord.com/invite/WJ5CvMDJ" target="_blank" rel="noopener noreferrer"> <i class="bx bxl-tiktok"  id="fa"></i></a>
+                    <a href="https://github.com/VictorTheDev1" target="_blank" rel="noopener noreferrer"> <i class="bx bxl-github"  id="fa"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=61566995633657" target="_blank" rel="noopener noreferrer"> <i class="bx bxl-facebook"  id="fa"></i></a>
   </div>
+</div>
+  </div>
+
+  <script src="/script.js">
+  </script>
+</body>
+</html>
 
   <script src="/script.js">
   </script>
