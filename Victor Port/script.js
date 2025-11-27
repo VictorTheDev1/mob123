@@ -1,5 +1,29 @@
 
-  
+  const phrases = [
+  "Build Something Legendary",
+  "Create Premium Designs",
+  "Bring Ideas To Life",
+  "Make Digital Experiences Stand Out"
+];
+
+const el = document.querySelector(".typing-text");
+let i = 0;
+
+function typePhrase() {
+  el.style.width = "0"; // reset width for typing effect
+  el.textContent = phrases[i];
+
+  // Restart animation
+  el.style.animation = "none";
+  void el.offsetWidth; // force reflow
+  el.style.animation = "typing 3s steps(30) forwards, blink .7s infinite";
+
+  i = (i + 1) % phrases.length; // loop
+}
+
+typePhrase();
+setInterval(typePhrase, 4000); 
+
   // small helpers
     const $ = sel => document.querySelector(sel);
 
