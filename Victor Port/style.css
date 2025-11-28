@@ -223,8 +223,78 @@
   }
 }
 
+.cert-section {
+  padding: 25px;
+}
 
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+  margin-top: 20px;
+}
 
+.cert-card {
+  background: rgba(255,255,255,0.03);
+  border-radius: 30px;
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px) saturate(140%);
+  transition: transform .25s ease, box-shadow .25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cert-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.45);
+}
+
+.cert-img {
+  width: 100%;
+  height: 150px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.02);
+}
+
+.cert-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.view-btn {
+  margin-top: 14px;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 500;
+  transition: .25s ease;
+  text-align: center;
+  font-size: 14px;
+
+}
+
+.view-btn:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-4px);
+}
+.cert-card a{
+  color: #ffffff;
+  text-decoration: none;
+  
+}
+#experience .list{
+  font-family: 'ubuntu', sans-serif;
+  font-weight: 300;
+}
  .card{
       background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
       border-radius:var(--radius);
@@ -327,6 +397,19 @@
       padding:8px 12px; border-radius:999px; font-weight:700; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
       border:1px solid rgba(255,255,255,0.03); color:var(--muted); font-size:0.95rem;
     }
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.skill-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
 
 /* Grid Layout */
 .projects-grid {
@@ -459,12 +542,42 @@
     .list .item{ padding:12px; border-radius:10px; background: rgba(255,255,255,0.02); display:flex; justify-content:space-between; align-items:center }
 
     /* contact form */
-    form .row{ display:flex; gap:10px; flex-direction:column }
-    .field{ display:flex; flex-direction:column; gap:8px; margin-bottom:10px }
-    input[type=text], input[type=email], textarea{
-      background: transparent; border:1px solid rgba(255,255,255,0.06); padding:12px; border-radius:10px; color:var(--text);
-      font-size:0.96rem;
-    }
+   form .row { 
+  display:flex; 
+  gap:10px; 
+  flex-direction:column; 
+}
+
+.field { 
+  display:flex; 
+  flex-direction:column; 
+  gap:8px; 
+  margin-bottom:10px; 
+}
+
+input[type=text], input[type=email], input[type=tel], textarea {
+  background: transparent;
+  border:1px solid rgba(255,255,255,0.06);
+  padding:12px;
+  border-radius:10px;
+  color:var(--text);
+  font-size:0.96rem;
+}
+
+/* Loader Animation */
+.loader {
+  width: 16px;
+  height: 16px;
+  border: 3px solid transparent;
+  border-top-color: var(--text);
+  border-radius: 50%;
+  animation: spin .6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
     textarea{ min-height:120px; resize:vertical }
 
     .form-foot{ display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap }
@@ -477,10 +590,15 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-  
-    margin-top: 100px;
-   
+     font-family: ubuntu;
+    margin-top: 80px;
 }
+.foot h2{
+    font-weight: 300;
+   margin-bottom: -40px;
+    font-size: 1rem;
+}
+
 .foot2 a{
     display: inline-flex;
     justify-content: center;
@@ -488,16 +606,14 @@
     width: 42px;
     height: 42px;
     background: transparent;
-    border: 0.2rem solid var(--main-color);
+    border: 0.1rem solid #ffffff;
     border-radius: 50%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--main-color);
    margin: 3rem 1.5rem 3rem 0;
    transition: 0.4s ease;
    text-decoration: none;
 }
-
-
 .foot2 a:hover{
     transform: scale(1.2) translate(-10px);
     background-color: var(--main-color);

@@ -1,4 +1,51 @@
 
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+  e.preventDefault();  
+
+  const submitBtn = document.getElementById("submitBtn");
+  const btnText = submitBtn.querySelector(".btn-text");
+  const loader = submitBtn.querySelector(".loader");
+  const status = document.getElementById("formStatus");
+
+  // UI: show loading
+  loader.style.display = "inline-block";
+  btnText.textContent = "Sending...";
+  submitBtn.disabled = true;
+  status.textContent = "";
+
+  try {
+    const formData = new FormData(this);
+
+    const response = await fetch(this.action, {
+      method: "POST",
+      body: formData
+    });
+
+    if (response.ok) {
+      status.style.color = "rgb(0, 200, 120)";
+      status.textContent = "Message sent successfully!";
+      this.reset();
+    } else {
+      throw new Error("Failed");
+    }
+  } catch (err) {
+    status.style.color = "rgb(255, 90, 90)";
+    status.textContent = "Message failed to send. Try again.";
+  }
+
+  // Reset button
+  loader.style.display = "none";
+  btnText.textContent = "Send message";
+  submitBtn.disabled = false;
+});
+
+// Clear button
+document.getElementById("clearBtn").addEventListener("click", () => {
+  document.getElementById("contactForm").reset();
+  document.getElementById("formStatus").textContent = "";
+});
+
+
   const phrases = [
   "Build Something Legendary",
   "Create Premium Designs",
